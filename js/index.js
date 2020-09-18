@@ -13,11 +13,11 @@
 
 // const total = 100;
 // const ordered = 50;
-// const result =
-//   total > ordered
-//     ? "На складе недостаточно товаров"
-//     : "Заказ оформлен, с вами свяжется менеджер";
-// console.log(result);
+// const message =
+// total > ordered
+//   ? "На складе недостаточно товаров"
+//   : "Заказ оформлен, с вами свяжется менеджер";
+// console.log(message);
 
 // Вариант решения 2
 
@@ -28,81 +28,95 @@
 // }
 
 // Задание 3
-
+// const ACCESS_DENIED = 'Доступ запрещен, неверный пароль!
+// const CANCELED_BY_USER = "Отменено пользователем!";
 // const ADMIN_PASSWORD = "jqueryismyjam";
-// let message;
+// const ACCESS_IS_ALLOWED = 'Добро пожаловать!'
 
-// const logIn = prompt("Введите пароль");
+// let message = prompt("Введите пароль");
 // if (logIn === null) {
-//   message = "Отменено пользователем!";
+//   message = CANCELED_BY_USER;
 // } else if (logIn === ADMIN_PASSWORD) {
-//   message = "Добро пожаловать!";
+//   message = ACCESS_IS_ALLOWED;
+// } else {
+//     message = ACCESS_DENIED;
 // }
 
 // console.log(message);
 
 // Задание 4
-
+// const orderPieces = 8;
+// const ACCESS_DENIED = "Недостаточно средств на счету!";
+// const CANCELED_BY_USER = "Отменено пользователем!";
 // const credits = 23580;
 // const pricePerDroid = 3000;
-// let theRemainderFunds;
+// let balanceCredit;
 // let totalPrice;
+// let message;
 
-// const buy = prompt("Какое количество дроидов купить ?");
-// if (buy === null) {
-//   totalPrice = "Отменено пользователем!";
-// } else if ((totalPrice = pricePerDroid * buy)) {
+// if (orderPieces === null) {
+//   message = CANCELED_BY_USER;
+// } else if ((totalPrice = pricePerDroid * orderPieces)) {
+//   message = ACCESS_DENIED;
 // }
 
-// theRemainderFunds = credits - totalPrice;
+// balanceCredit = credits - totalPrice;
 
 // if (totalPrice > credits) {
-//   totalPrice = "Недостаточно средств на счету!";
+//   totalPrice = ACCESS_DENIED;
 // } else if (totalPrice < credits) {
-//   totalPrice = `Вы купили ${buy} дроидов, на счету осталось ${theRemainderFunds} кредитов.`;
+//   message = `Вы купили ${orderPieces} дроидов, на счету осталось ${balanceCredit} кредитов.`;
 // }
 
-// theRemainderFunds = credits - totalPrice;
+// balanceCredit = credits - totalPrice;
 
-// console.log(totalPrice);
+// console.log(message);
 
 // Задание 5
+// const countryName = "ЯмайкА";
 
-// let cost;
-// let count;
-// let country = prompt("Введите страну доставки");
+// const CANCELED_BY_USER = "Отменено пользователем!";
+// const NO_DELIVERY = "В выбранную страну доставка недоступна.";
+// const CHINA = "Китай";
+// const AUSTRALIA = "Австралия";
+// const INDIA = "Индия";
+// const JAMAICA = "Ямайка";
+// let message;
+// let price = 0;
+// let country;
+// if (countryName === null) {
+//   message = CANCELED_BY_USER;
+// } else {
+//   country = countryName[0].toUpperCase() + countryName.slice(1).toLowerCase(); // Write code on this line
+//   switch (country) {
+//     // Write code under this line
+//     case CHINA:
+//       price = 100;
+//       console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+//       break;
 
-// switch (country.toLowerCase()) {
-//   case "китай":
-//     cost = 100;
-//     country = "Китай";
-//     console.log(`Доставка в ${country} будет стоить ${cost} кредитов`);
-//     break;
+//     case AUSTRALIA:
+//       price = 170;
+//       console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+//       break;
 
-//   case "чили":
-//     cost = 250;
-//     country = "Чили";
-//     console.log(`Доставка в ${country} будет стоить ${cost} кредитов`);
-//     break;
+//     case INDIA:
+//       price = 80;
+//       console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+//       break;
 
-//   case "австралия":
-//     cost = 170;
-//     country = "Австралия";
-//     console.log(`Доставка в ${country} будет стоить ${cost} кредитов`);
-//     break;
+//     case JAMAICA:
+//       price = 120;
+//       console.log(`Доставка в ${country} будет стоить ${price} кредитов`);
+//       break;
 
-//   case "индия":
-//     cost = 80;
-//     country = "Индия";
-//     console.log(`Доставка в ${country} будет стоить ${cost} кредитов`);
-//     break;
-
-//   case "ямайка":
-//     cost = 120;
-//     country = "Ямайка";
-//     console.log(`Доставка в ${country} будет стоить ${cost} кредитов`);
-//     break;
-
-//   default:
-//     alert("В вашей стране доставка не доступна");
+//     default:
+//       message = NO_DELIVERY;
+//   }
 // }
+// if (price > 0) {
+//   // Write code on this line
+//   message = `Доставка в ${country} будет стоить ${price} кредитов`;
+// }
+
+// console.log(message);
