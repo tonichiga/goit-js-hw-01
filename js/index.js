@@ -120,3 +120,15 @@
 // }
 
 // console.log(message);
+
+// Перебор чисел
+
+// let message;
+// let max = 10;
+// let i;
+
+// for (let i = 0; i < max; i += 1) {
+//   if (i % 3 === 0) {
+//   }
+//   console.log(i);
+// }
